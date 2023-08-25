@@ -20,7 +20,7 @@ function App() {
 
   const [sortOption, setSortOption] = useState('name-asc');
 
-  const handleSort = (sortBy) => {
+  const handleSort = sortBy => {
     setSortOption(sortBy);
   };
 
