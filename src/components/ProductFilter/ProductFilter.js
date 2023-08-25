@@ -19,7 +19,7 @@ const ProductFilter = ({ categories, onFilter }) => {
 
   return (
     <div>
-      {/* Category filter */}
+      Category filter
       <select
         value={selectedCategory}
         onChange={e => setSelectedCategory(e.target.value)}

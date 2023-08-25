@@ -1,15 +1,13 @@
 import React from 'react';
-import productsData from '../../data/data.json';
+import ProductTile from '../ProductTile/ProductTile';
 
-const ProductGrid = ({ filterParams, sortOption }) => {
+const ProductGrid = ({ filterParams, sortOption, visibleProducts, productsData }) => {
+
     const filteredProducts = productsData.filter(product => {
         if (filterParams.category && product.category !== filterParams.category) {
             return false;
         }
-        if (
-            filterParams.minPrice &&
-            parseFloat(product.price) < filterParams.minPrice
-        ) {
+        if (filterParams.minPrice && parseFloat(product.price) < filterParams.minPrice) {
             return false;
         }
 
@@ -18,32 +16,28 @@ const ProductGrid = ({ filterParams, sortOption }) => {
 
     const getSortFunction = () => {
         if (sortOption === 'name-asc') {
-          return (a, b) => a.name.localeCompare(b.name);
+            return (a, b) => a.name.localeCompare(b.name);
         }
         if (sortOption === 'name-desc') {
-          return (a, b) => b.name.localeCompare(a.name);
+            return (a, b) => b.name.localeCompare(a.name);
         }
         if (sortOption === 'price-asc') {
-          return (a, b) => parseFloat(a.price) - parseFloat(b.price);
+            return (a, b) => parseFloat(a.price) - parseFloat(b.price);
         }
         if (sortOption === 'price-desc') {
-          return (a, b) => parseFloat(b.price) - parseFloat(a.price);
+            return (a, b) => parseFloat(b.price) - parseFloat(a.price);
         }
         return null;
-      };
+    };
 
-      const sortedProducts = [...filteredProducts].sort(getSortFunction());
+    const sortedProducts = [...filteredProducts].sort(getSortFunction());
+
+    const visibleProductsList = sortedProducts.slice(0, visibleProducts);
 
     return (
         <div>
-            {sortedProducts.map(product => (
-                <div key={product.name}>
-                    <h3>{product.name}</h3>
-                    <img src={product.image} alt='product-img' />
-                    <p>{product.short_description}</p>
-                    <span>{product.price}</span>
-                    {product.sales_price && <span>{product.sales_price}</span>}
-                </div>
+            {visibleProductsList.map(product => (
+                <ProductTile key={product.id} product={product} />
             ))}
         </div>
     );

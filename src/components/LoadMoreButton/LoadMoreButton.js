@@ -1,12 +1,11 @@
+import React from 'react';
 
-const LoadMoreButton = () => {
-    
-    return (
-        <div>
-            <h3>LoadMore</h3>
-        </div>
-    )
-    
+const LoadMoreButton = ({ onLoadMore, disabled }) => {
+  return (
+    <button onClick={onLoadMore} disabled={disabled}>
+      Load More
+    </button>
+  );
 };
 
 export default LoadMoreButton;
