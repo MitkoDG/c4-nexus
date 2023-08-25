@@ -5,7 +5,7 @@ import Header from './components/Header/Header';
 import LoadMoreButton from './components/LoadMoreButton/LoadMoreButton';
 import ProductGrid from './components/ProductGrid/ProductGrid';
 import ProductSort from './components/ProductSort/ProductSort';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import productsData from './data/data.json';
 import CategoriesDesc from './components/CategoriesDesc/CategoriesDesc';
 
@@ -16,13 +16,17 @@ function App() {
   const [filterParams, setFilterParams] = useState({});
   const [sortOption, setSortOption] = useState('name-asc');
   const [visibleProducts, setVisibleProducts] = useState(5);
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState('');
 
+  useEffect(() =>{
+    setSelectedCategory(categories[0]);
+  },[])
+  
   // filter
-  const handleFilter = (params, category) => {
+  const handleFilter = (params) => {
     setFilterParams(params);
-    setSelectedCategory(category);
-  };
+    setSelectedCategory(params.category || "All");
+  }
 
   // sort
   const handleSort = sortBy => {

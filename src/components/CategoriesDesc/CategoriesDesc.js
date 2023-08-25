@@ -2,7 +2,7 @@
 const CategoriesDesc = ({ selectedCategory }) => {
     return (
         <div>
-            <p>Selected Category: {selectedCategory}</p>
+            <h3>Selected Category: {selectedCategory}</h3>
         </div>
     );
 };
