@@ -1,6 +1,11 @@
 
 const ProductTile = () => {
-
+    
+    return (
+        <div>
+            <h3>ProductTile</h3>
+        </div>
+    )
     
 };
 

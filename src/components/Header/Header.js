@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <nav className="navbar">
-      <div className="logo">Your Logo</div>
+      <div className="logo">Logo</div>
       <div className={`menu ${showMenu ? 'active' : ''}`}>
         <a href="/">Home</a>
         <a href="/bags">Bags</a>

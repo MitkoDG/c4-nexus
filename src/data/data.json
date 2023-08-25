@@ -1,0 +1,39 @@
+[
+    {
+      "name": "Leather Tote Bag",
+      "short_description": "Classic leather tote bag for everyday use.",
+      "category": "Bags",
+      "image": "leather_tote.jpg",
+      "price": 120.0,
+      "sales_price": 89.99,
+      "rating": 4.5
+    },
+    {
+      "name": "Canvas Backpack",
+      "short_description": "Durable canvas backpack for outdoor adventures.",
+      "category": "Bags",
+      "image": "canvas_backpack.jpg",
+      "price": 85.0,
+      "sales_price": null,
+      "rating": 4.0
+    },
+    {
+      "name": "Classic Oxford Shoes New",
+      "short_description": "Elegant classic oxford shoes for formal occasions.",
+      "category": "Shoes",
+      "image": "oxford_shoes.jpg",
+      "price": 150.0,
+      "sales_price": 119.99,
+      "rating": 4.8
+    },
+    {
+      "name": "Classic Oxford Shoes",
+      "short_description": "Elegant classic oxford shoes for formal occasions.",
+      "category": "Shoes",
+      "image": "oxford_shoes.jpg",
+      "price": 150.0,
+      "sales_price": 129.99,
+      "rating": 4.8
+    }
+  ]
+  
