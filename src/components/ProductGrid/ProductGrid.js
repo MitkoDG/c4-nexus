@@ -1,10 +1,10 @@
 import React from 'react';
 import ProductTile from '../ProductTile/ProductTile';
 
-const ProductGrid = ({ filterParams, sortOption, visibleProducts, productsData }) => {
+const ProductGrid = ({ filterParams, sortOption, visibleProducts, productsData, selectedCategory }) => {
 
     const filteredProducts = productsData.filter(product => {
-        if (filterParams.category && product.category !== filterParams.category) {
+        if (selectedCategory && product.category !== selectedCategory) {
             return false;
         }
         if (filterParams.minPrice && parseFloat(product.price) < filterParams.minPrice) {

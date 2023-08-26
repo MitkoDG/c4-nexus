@@ -23,7 +23,7 @@
     "id": 3,
     "name": "Classic Oxford Shoes New",
     "short_description": "Elegant classic oxford shoes for formal occasions.",
-    "category": "../../data/images/shoe.jpg",
+    "category": "Shoes",
     "image": "https://via.placeholder.com/200x200",
     "price": 150.0,
     "sales_price": 119.99,
@@ -131,6 +131,68 @@
   },
   {
     "id": 14,
+    "name": "Classic Oxford Shoes",
+    "short_description": "Elegant classic oxford shoes for formal occasions.",
+    "category": "Bags",
+    "image": "https://via.placeholder.com/200x200",
+    "price": 150.0,
+    "sales_price": 129.99,
+    "rating": 4.8
+  }
+  ,
+  {
+    "id": 15,
+    "name": "Classic Oxford Shoes",
+    "short_description": "Elegant classic oxford shoes for formal occasions.",
+    "category": "Bags",
+    "image": "https://via.placeholder.com/200x200",
+    "price": 150.0,
+    "sales_price": 129.99,
+    "rating": 4.8
+  },
+  {
+    "id": 16,
+    "name": "Classic Oxford Shoes",
+    "short_description": "Elegant classic oxford shoes for formal occasions.",
+    "category": "Bags",
+    "image": "https://via.placeholder.com/200x200",
+    "price": 150.0,
+    "sales_price": 129.99,
+    "rating": 4.8
+  }
+  ,
+  {
+    "id": 17,
+    "name": "Classic Oxford Shoes",
+    "short_description": "Elegant classic oxford shoes for formal occasions.",
+    "category": "Bags",
+    "image": "https://via.placeholder.com/200x200",
+    "price": 150.0,
+    "sales_price": 129.99,
+    "rating": 4.8
+  },
+  {
+    "id": 18,
+    "name": "Classic Oxford Shoes",
+    "short_description": "Elegant classic oxford shoes for formal occasions.",
+    "category": "Bags",
+    "image": "https://via.placeholder.com/200x200",
+    "price": 150.0,
+    "sales_price": 129.99,
+    "rating": 4.8
+  },
+  {
+    "id": 19,
+    "name": "Classic Oxford Shoes",
+    "short_description": "Elegant classic oxford shoes for formal occasions.",
+    "category": "Bags",
+    "image": "https://via.placeholder.com/200x200",
+    "price": 150.0,
+    "sales_price": 129.99,
+    "rating": 4.8
+  },
+  {
+    "id": 20,
     "name": "Classic Oxford Shoes",
     "short_description": "Elegant classic oxford shoes for formal occasions.",
     "category": "Bags",

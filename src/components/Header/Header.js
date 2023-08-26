@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './Header.css';
+import logo from "../../data/images/logo.png"
 
-const Header = () => {
+const Header = ({ totalProducts, displayedProducts, onCategoryClick }) => {
   const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenu = () => {
@@ -13,8 +14,11 @@ const Header = () => {
       <div className="logo">Logo</div>
       <div className={`menu ${showMenu ? 'active' : ''}`}>
         <a href="/">Home</a>
-        <a href="/bags">Bags</a>
-        <a href="/shoes">Shoes</a>
+        <a href="#" onClick={() => onCategoryClick('Bags')}>Bags</a>
+        <a href="#" onClick={() => onCategoryClick('Shoes')}>Shoes</a>
+      </div>
+      <div className="product-counter">
+        {`Showing ${displayedProducts} out of ${totalProducts} products`}
       </div>
       <div className="hamburger" onClick={toggleMenu}>
         <div className="bar"></div>

@@ -7,6 +7,7 @@ import ProductGrid from './components/ProductGrid/ProductGrid';
 import ProductSort from './components/ProductSort/ProductSort';
 import React, { useEffect, useState } from 'react';
 import productsData from './data/data.json';
+// import productsData from './data/MOCK_DATA.json';
 import CategoriesDesc from './components/CategoriesDesc/CategoriesDesc';
 
 
@@ -21,6 +22,10 @@ function App() {
   useEffect(() =>{
     setSelectedCategory(categories[0]);
   },[])
+
+  const handleCategoryClick = (category) => {
+    setSelectedCategory(category);
+  };
   
   // filter
   const handleFilter = (params) => {
@@ -42,7 +47,11 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <Header
+        totalProducts={ totalProducts }
+        displayedProducts={ visibleProducts }
+        onCategoryClick={handleCategoryClick}
+      />
       <div className='body'>
         <ProductFilter categories={categories} onFilter={handleFilter} />
         <div>
@@ -50,7 +59,13 @@ function App() {
             <CategoriesDesc selectedCategory={selectedCategory} />
             <ProductSort onSort={handleSort} />
           </div>
-          <ProductGrid visibleProducts={visibleProducts} filterParams={filterParams} sortOption={sortOption} productsData={productsData} />
+          <ProductGrid 
+          visibleProducts={visibleProducts} 
+          filterParams={filterParams} 
+          sortOption={sortOption} 
+          productsData={productsData} 
+          selectedCategory={selectedCategory}
+          />
         </div>
       </div>
       <LoadMoreButton onLoadMore={handleLoadMore} disabled={disabledLoadMore} />
