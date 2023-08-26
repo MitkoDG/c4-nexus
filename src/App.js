@@ -54,11 +54,11 @@ function App() {
       />
       <div className='body'>
         <ProductFilter categories={categories} onFilter={handleFilter} />
-        <div>
-          <div>
+        <div className='product_section'>
+          <div className='product_info'>
             <CategoriesDesc selectedCategory={selectedCategory} />
             <ProductSort onSort={handleSort} />
-          </div>
+          </div >
           <ProductGrid 
           visibleProducts={visibleProducts} 
           filterParams={filterParams} 

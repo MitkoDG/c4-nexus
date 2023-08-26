@@ -35,7 +35,7 @@ const ProductGrid = ({ filterParams, sortOption, visibleProducts, productsData, 
     const visibleProductsList = sortedProducts.slice(0, visibleProducts);
 
     return (
-        <div>
+        <div className='product_list'>
             {visibleProductsList.map(product => (
                 <ProductTile key={product.id} product={product} />
             ))}

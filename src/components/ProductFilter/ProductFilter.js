@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "./ProductFilter.css"
 
 const ProductFilter = ({ categories, onFilter }) => {
   const [selectedCategory, setSelectedCategory] = useState('');
@@ -18,8 +19,8 @@ const ProductFilter = ({ categories, onFilter }) => {
   };
 
   return (
-    <div>
-      Category filter
+    <div className='filter'>
+      <h3>Category filter</h3>
       <select
         value={selectedCategory}
         onChange={e => setSelectedCategory(e.target.value)}

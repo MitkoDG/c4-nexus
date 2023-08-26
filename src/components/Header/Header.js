@@ -9,21 +9,30 @@ const Header = ({ totalProducts, displayedProducts, onCategoryClick }) => {
     setShowMenu(!showMenu);
   };
 
+  const closeMenu = () => {
+    setShowMenu(false);
+  };
+
   return (
     <nav className="navbar">
-      <div className="logo"><a href='https://dimitargegov.site/' target='_blank' rel="noreferrer"><img src={logo} alt='DDG projects'/></a></div>
-      <div className={`menu ${showMenu ? 'active' : ''}`}>
-        <a href="/">Home</a>
-        <a href="#" onClick={() => onCategoryClick('Bags')}>Bags</a>
-        <a href="#" onClick={() => onCategoryClick('Shoes')}>Shoes</a>
+      <div className="logo">
+        <a href='https://dimitargegov.site/' target='_blank' rel="noreferrer">
+          <img src={logo} alt='DDG projects' />
+        </a>
       </div>
       <div className="product-counter">
         {`Showing ${displayedProducts} out of ${totalProducts} products`}
       </div>
-      <div className="hamburger" onClick={toggleMenu}>
+      <div className={`modal-overlay ${showMenu ? 'active' : ''}`} onClick={closeMenu}></div>
+      <div className={`hamburger ${showMenu ? 'active' : ''}`} onClick={toggleMenu}>
         <div className="bar"></div>
         <div className="bar"></div>
         <div className="bar"></div>
+      </div>
+      <div className={`menu ${showMenu ? 'active' : ''}`}>
+        <a href="/" onClick={closeMenu}>Home</a>
+        <a href="#" onClick={() => { onCategoryClick('Bags'); closeMenu(); }}>Bags</a>
+        <a href="#" onClick={() => { onCategoryClick('Shoes'); closeMenu(); }}>Shoes</a>
       </div>
     </nav>
   );

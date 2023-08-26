@@ -4,6 +4,30 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
 .body {
   display: flex;
+  margin-top: 90px;
+  gap: 10px;
+}
+
+.product_section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.product_info {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media (max-width: 768px) {
+  .body {
+    flex-direction: column;
+  }
 }
