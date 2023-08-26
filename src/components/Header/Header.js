@@ -11,7 +11,7 @@ const Header = ({ totalProducts, displayedProducts, onCategoryClick }) => {
 
   return (
     <nav className="navbar">
-      <div className="logo"><a href='https://dimitargegov.site/'><img src={logo} alt='DDG projects'/></a></div>
+      <div className="logo"><a href='https://dimitargegov.site/' target='_blank' rel="noreferrer"><img src={logo} alt='DDG projects'/></a></div>
       <div className={`menu ${showMenu ? 'active' : ''}`}>
         <a href="/">Home</a>
         <a href="#" onClick={() => onCategoryClick('Bags')}>Bags</a>

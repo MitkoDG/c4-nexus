@@ -1,12 +1,15 @@
+import './Footer.css';
 
 const Footer = () => {
-    
-    return (
-        <div>
-            <h3>Footer</h3>
-        </div>
-    )
-    
+  return (
+    <footer className="footer">
+      <div className="footer-links">
+        <a href="/terms">Terms & Conditions</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/contact">Contact Us</a>
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;

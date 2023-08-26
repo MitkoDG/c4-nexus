@@ -1,8 +1,9 @@
+import "./CategoriesDesc";
 
 const CategoriesDesc = ({ selectedCategory }) => {
     return (
         <div>
-            <h3>Selected Category: {selectedCategory}</h3>
+            <h3>Selected Category: <span className="category_name">{selectedCategory}</span></h3>
         </div>
     );
 };
