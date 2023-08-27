@@ -9,12 +9,23 @@ const ProductFilter = ({ categories, onFilter }) => {
 
   // Handler to apply the filter
   const applyFilter = () => {
-    const filterParams = {
-      category: selectedCategory,
-      minPrice: parseFloat(minPrice),
-      maxPrice: parseFloat(maxPrice),
-      minRating: parseFloat(minRating)
-    };
+    const filterParams = {};
+
+    if (selectedCategory) {
+      filterParams.category = selectedCategory;
+    }
+
+    if (minPrice !== '') {
+      filterParams.minPrice = parseFloat(minPrice);
+    }
+
+    if (maxPrice !== '') {
+      filterParams.maxPrice = parseFloat(maxPrice);
+    }
+
+    if (minRating !== '') {
+      filterParams.minRating = parseFloat(minRating);
+    }
     onFilter(filterParams);
   };
 
@@ -32,8 +43,6 @@ const ProductFilter = ({ categories, onFilter }) => {
           </option>
         ))}
       </select>
-
-      {/* Price range filter */}
       <input
         type="number"
         placeholder="Min Price"
@@ -56,7 +65,7 @@ const ProductFilter = ({ categories, onFilter }) => {
       />
 
       {/* Apply filter button */}
-      <button onClick={applyFilter}>Apply Filter</button>
+      <button onClick={applyFilter} className='filter-button'>Apply Filter</button>
     </div>
   );
 };

@@ -7,7 +7,6 @@ import ProductGrid from './components/ProductGrid/ProductGrid';
 import ProductSort from './components/ProductSort/ProductSort';
 import React, { useEffect, useState } from 'react';
 import productsData from './data/data.json';
-// import productsData from './data/MOCK_DATA.json';
 import CategoriesDesc from './components/CategoriesDesc/CategoriesDesc';
 
 
@@ -17,7 +16,7 @@ function App() {
   const [filterParams, setFilterParams] = useState({});
   const [sortOption, setSortOption] = useState('name-asc');
   const [visibleProducts, setVisibleProducts] = useState(5);
-  const [selectedCategory, setSelectedCategory] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
 
   useEffect(() =>{
     setSelectedCategory(categories[0]);
@@ -27,18 +26,19 @@ function App() {
     setSelectedCategory(category);
   };
   
-  // filter
+  // Filter
   const handleFilter = (params) => {
+    console.log(params);
     setFilterParams(params);
     setSelectedCategory(params.category || "All");
   }
 
-  // sort
+  // Sort
   const handleSort = sortBy => {
     setSortOption(sortBy);
   };
 
-  // load more button
+  // Load more button
   const handleLoadMore = () => {
     setVisibleProducts(prevVisibleProducts => prevVisibleProducts + 5);
   };
@@ -54,8 +54,8 @@ function App() {
       />
       <div className='body'>
         <ProductFilter categories={categories} onFilter={handleFilter} />
-        <div className='product_section'>
-          <div className='product_info'>
+        <div className='product-section'>
+          <div className='product-info'>
             <CategoriesDesc selectedCategory={selectedCategory} />
             <ProductSort onSort={handleSort} />
           </div >

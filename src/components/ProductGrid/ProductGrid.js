@@ -1,19 +1,21 @@
 import React from 'react';
 import ProductTile from '../ProductTile/ProductTile';
+import "./ProductGrid.css"
 
 const ProductGrid = ({ filterParams, sortOption, visibleProducts, productsData, selectedCategory }) => {
 
     const filteredProducts = productsData.filter(product => {
-        if (selectedCategory && product.category !== selectedCategory) {
+        if (selectedCategory !== 'All' && product.category !== selectedCategory) {
             return false;
         }
         if (filterParams.minPrice && parseFloat(product.price) < filterParams.minPrice) {
             return false;
         }
-
         return true;
     });
 
+    // console.log(filteredProducts);
+    
     const getSortFunction = () => {
         if (sortOption === 'name-asc') {
             return (a, b) => a.name.localeCompare(b.name);

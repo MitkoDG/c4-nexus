@@ -11,17 +11,19 @@ body {
 
 .body {
   display: flex;
-  margin-top: 90px;
+  margin-top: 80px;
   gap: 10px;
 }
 
-.product_section {
+.product-section {
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin: 1rem;
+  padding: 1rem;
 }
 
-.product_info {
+.product-info {
   display: flex;
   justify-content: space-around;
 }
