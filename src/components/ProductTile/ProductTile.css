@@ -23,6 +23,7 @@
 .product-tile img {
   max-width: 100%;
   height: auto;
+  margin-bottom: 1rem;
 }
 
 .original-price {
@@ -37,11 +38,12 @@
 
 .rating {
   margin-top: 0.5rem;
-  color: #f39c12; /* Orange color for rating */
+  color: #f39c12;
   font-weight: bold;
 }
 
 .add-to-cart-button {
+  margin-top: auto;
   background-color: #333;
   color: white;
   border: none;

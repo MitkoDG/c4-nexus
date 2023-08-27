@@ -84,5 +84,6 @@
   .hamburger.active,
   .modal-overlay.active {
     display: flex;
+    padding: 1rem;
   }
 }

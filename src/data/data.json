@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Leather Tote Bag",
-    "short_description": "Classic leather tote bag for everyday use.",
+    "short_description": "Elegant classic oxford shoes for formal occasions.",
     "category": "Bags",
     "image": "./images/bag1.png",
     "price": 120.0,
@@ -12,7 +12,7 @@
   {
     "id": 2,
     "name": "Canvas Backpack",
-    "short_description": "Durable canvas backpack for outdoor adventures.",
+    "short_description": "Elegant classic oxford shoes for formal occasions.",
     "category": "Bags",
     "image": "./images/bag1.png",
     "price": 85.0,
