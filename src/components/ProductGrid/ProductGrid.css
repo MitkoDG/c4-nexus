@@ -1,6 +1,21 @@
-.product_list {
+/* .product_list {
     display: flex;
-    /* flex-wrap: wrap; */
     flex-flow: row wrap;
     justify-content: space-evenly;
+} */
+
+.product_list {
+  display: grid;
+  padding: 20px 0;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+@media (max-width: 768px) {
+  .product_list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+  }
 }
