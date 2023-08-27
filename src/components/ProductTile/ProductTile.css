@@ -4,17 +4,20 @@
   flex-direction: column;
   border: 1px solid #b93c3c;
   padding: 5px;
-  /* margin: 1rem; */
   background-color: #f9f9f9;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-tile h3 {
+    margin: 1rem;
 }
 
 .heart-icon {
   position: absolute;
   top: 0;
   right: 0;
-  transform: translate(-50%, 20%);
+  transform: translate(-60%, 20%);
   background-color: #fff;
   color: #e74c3c;
   font-size: 22px;
@@ -80,4 +83,10 @@
 
 .add-to-cart-button:hover {
   transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .product-tile {
+        /* max-width: fit-content; */
+    }
 }

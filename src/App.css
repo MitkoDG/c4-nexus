@@ -27,12 +27,18 @@ body {
 
 .product-info {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  /* width: 90%; */
+  /* padding: 1rem; */
   border-bottom: 1px solid #000000;
 }
 
 @media (max-width: 768px) {
   .body {
     flex-direction: column;
+  }
+  .product-info {
+    flex-direction: column;
+    align-items: center;
   }
 }
