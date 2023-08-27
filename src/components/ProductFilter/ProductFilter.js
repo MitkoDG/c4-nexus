@@ -35,6 +35,7 @@ const ProductFilter = ({ categories, onFilter }) => {
       <select
         value={selectedCategory}
         onChange={e => setSelectedCategory(e.target.value)}
+        className='filter-select'
       >
         <option value="">All Categories</option>
         {categories.map(category => (

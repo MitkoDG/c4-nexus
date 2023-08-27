@@ -1,0 +1,25 @@
+/* .load-more-container {
+  display: flex;
+  justify-content: center;
+}
+
+.load-more-button {
+  width: 50%;
+  margin: 5px 0;
+  background-color: #838383;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+} */
+
+.load-more-button:hover {
+  /* background-color: #555; */
+}
+
+@media (max-width: 768px) {
+  .load-more-button {
+  }
+}

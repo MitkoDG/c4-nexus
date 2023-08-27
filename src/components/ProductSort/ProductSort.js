@@ -1,4 +1,5 @@
 import React from 'react';
+import './ProductSort.css';
 
 const ProductSort = ({ onSort }) => {
   const handleSortChange = e => {
@@ -7,7 +8,7 @@ const ProductSort = ({ onSort }) => {
   };
 
   return (
-    <div>
+    <div className='product-sort'>
       <label htmlFor="sort">Sort by:</label>
       <select id="sort" onChange={handleSortChange}>
         <option value="name-asc">Name (A-Z)</option>

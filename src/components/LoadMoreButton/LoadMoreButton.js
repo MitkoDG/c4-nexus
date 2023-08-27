@@ -1,10 +1,12 @@
-import React from 'react';
+import './LoadMoreButton.css';
 
 const LoadMoreButton = ({ onLoadMore, disabled }) => {
   return (
-    <button onClick={onLoadMore} disabled={disabled}>
-      Load More
-    </button>
+    <div className='load-more-container'>
+      <button className="load-more-button" onClick={onLoadMore} disabled={disabled}>
+        Load More
+      </button>
+    </div>
   );
 };
 

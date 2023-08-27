@@ -10,26 +10,32 @@ import productsData from './data/data.json';
 import CategoriesDesc from './components/CategoriesDesc/CategoriesDesc';
 import ScrollToTopButton from './components/ScrollToTopButton/ScrollToTopButton';
 
-
 function App() {
 
   const categories = ['Bags', 'Shoes'];
   const [filterParams, setFilterParams] = useState({});
   const [sortOption, setSortOption] = useState('name-asc');
-  const [visibleProducts, setVisibleProducts] = useState(5);
+  const [visibleProducts, setVisibleProducts] = useState(10);
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const [totalProducts, setTotalProducts] = useState(productsData.length);
 
-  useEffect(() =>{
+  useEffect(() => {
     setSelectedCategory(categories[0]);
-  },[])
+  }, [])
+
+  useEffect(() => {
+    if (visibleProducts > totalProducts) {
+      setVisibleProducts(totalProducts)
+    }
+  }, [visibleProducts])
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
   };
-  
+
   // Filter
   const handleFilter = (params) => {
-    console.log(params);
+    setVisibleProducts(10);
     setFilterParams(params);
     setSelectedCategory(params.category || "All");
   }
@@ -41,16 +47,16 @@ function App() {
 
   // Load more button
   const handleLoadMore = () => {
-    setVisibleProducts(prevVisibleProducts => prevVisibleProducts + 5);
+    setVisibleProducts(prevVisibleProducts => prevVisibleProducts + 10);
   };
-  const totalProducts = productsData.length;
+  // const totalProducts = productsData.length;
   const disabledLoadMore = visibleProducts >= totalProducts;
 
   return (
     <div className="App">
       <Header
-        totalProducts={ totalProducts }
-        displayedProducts={ visibleProducts }
+        totalProducts={totalProducts}
+        displayedProducts={visibleProducts}
         onCategoryClick={handleCategoryClick}
       />
       <div className='body'>
@@ -60,16 +66,17 @@ function App() {
             <CategoriesDesc selectedCategory={selectedCategory} />
             <ProductSort onSort={handleSort} />
           </div >
-          <ProductGrid 
-          visibleProducts={visibleProducts} 
-          filterParams={filterParams} 
-          sortOption={sortOption} 
-          productsData={productsData} 
-          selectedCategory={selectedCategory}
+          <ProductGrid
+            visibleProducts={visibleProducts}
+            filterParams={filterParams}
+            sortOption={sortOption}
+            productsData={productsData}
+            selectedCategory={selectedCategory}
+            onTotalProductsCalculated={total => setTotalProducts(total)}
           />
+          <LoadMoreButton onLoadMore={handleLoadMore} disabled={disabledLoadMore} />
         </div>
       </div>
-      <LoadMoreButton onLoadMore={handleLoadMore} disabled={disabledLoadMore} />
       <Footer />
       <ScrollToTopButton />
     </div>

@@ -1,5 +1,6 @@
 .product-tile {
   display: flex;
+  position: relative;
   flex-direction: column;
   border: 1px solid #ccc;
   padding: 1rem;
@@ -7,6 +8,20 @@
   background-color: #f9f9f9;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.heart-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-50%, 20%);
+  background-color: #fff;
+  color: #e74c3c;
+  font-size: 22px;
+  padding: 5px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
 .price-container {
@@ -30,12 +45,12 @@
   color: #888;
   text-decoration: line-through;
   margin-left: 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .normal-price {
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .rating {

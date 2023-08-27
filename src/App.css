@@ -21,12 +21,14 @@ body {
   flex-direction: column;
   width: 100%;
   margin: 1rem;
-  padding: 1rem;
+  /* padding: 1rem; */
+  overflow: hidden;
 }
 
 .product-info {
   display: flex;
   justify-content: space-around;
+  border-bottom: 1px solid #000000;
 }
 
 @media (max-width: 768px) {

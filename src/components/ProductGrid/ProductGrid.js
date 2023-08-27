@@ -2,7 +2,7 @@ import React from 'react';
 import ProductTile from '../ProductTile/ProductTile';
 import "./ProductGrid.css"
 
-const ProductGrid = ({ filterParams, sortOption, visibleProducts, productsData, selectedCategory }) => {
+const ProductGrid = ({ filterParams, sortOption, visibleProducts, productsData, selectedCategory, onTotalProductsCalculated  }) => {
 
     const filteredProducts = productsData.filter(product => {
         if (selectedCategory !== 'All' && product.category !== selectedCategory) {
@@ -14,8 +14,9 @@ const ProductGrid = ({ filterParams, sortOption, visibleProducts, productsData, 
         return true;
     });
 
-    // console.log(filteredProducts);
-    
+    const calculatedTotalProducts = filteredProducts.length;
+    onTotalProductsCalculated(calculatedTotalProducts);
+
     const getSortFunction = () => {
         if (sortOption === 'name-asc') {
             return (a, b) => a.name.localeCompare(b.name);
@@ -33,7 +34,6 @@ const ProductGrid = ({ filterParams, sortOption, visibleProducts, productsData, 
     };
 
     const sortedProducts = [...filteredProducts].sort(getSortFunction());
-
     const visibleProductsList = sortedProducts.slice(0, visibleProducts);
 
     return (
