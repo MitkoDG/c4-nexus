@@ -74,7 +74,8 @@ function App() {
             selectedCategory={selectedCategory}
             onTotalProductsCalculated={total => setTotalProducts(total)}
           />
-          <LoadMoreButton onLoadMore={handleLoadMore} disabled={disabledLoadMore} />
+          <LoadMoreButton onLoadMore={handleLoadMore} totalProducts={totalProducts}
+            displayedProducts={visibleProducts} disabled={disabledLoadMore} />
         </div>
       </div>
       <Footer />

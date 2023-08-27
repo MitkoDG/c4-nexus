@@ -20,9 +20,9 @@ const Header = ({ totalProducts, displayedProducts, onCategoryClick }) => {
           <img src={logo} alt='DDG projects' />
         </a>
       </div>
-      <div className="product-counter">
+      {/* <div className="product-counter">
         {`Showing ${displayedProducts} out of ${totalProducts} products`}
-      </div>
+      </div> */}
       <div className={`modal-overlay ${showMenu ? 'active' : ''}`} onClick={closeMenu}></div>
       <div className={`hamburger ${showMenu ? 'active' : ''}`} onClick={toggleMenu}>
         <div className="bar"></div>
