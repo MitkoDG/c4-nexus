@@ -8,6 +8,7 @@ import ProductSort from './components/ProductSort/ProductSort';
 import React, { useEffect, useState } from 'react';
 import productsData from './data/data.json';
 import CategoriesDesc from './components/CategoriesDesc/CategoriesDesc';
+import ScrollToTopButton from './components/ScrollToTopButton/ScrollToTopButton';
 
 
 function App() {
@@ -70,6 +71,7 @@ function App() {
       </div>
       <LoadMoreButton onLoadMore={handleLoadMore} disabled={disabledLoadMore} />
       <Footer />
+      <ScrollToTopButton />
     </div>
   );
 }

@@ -30,10 +30,12 @@
   color: #888;
   text-decoration: line-through;
   margin-left: 0.5rem;
+  font-size: 1.2rem;
 }
 
 .normal-price {
   font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .rating {
@@ -51,6 +53,7 @@
   border-radius: 4px;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
+  text-transform: uppercase;
 }
 
 .add-to-cart-button.added {
