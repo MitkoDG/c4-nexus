@@ -1,3 +1,5 @@
+![link](https://github.com/MitkoDG/c4-nexus/blob/master/screenshot.jpg)
+
 ## Summary of Implemented Features:
 
 In this project, I have developed a responsive web application by using JavaScript, HTML, CSS and React. The application focuses on creating a product listing page (PLP) with various interactive functionalities. Here's a breakdown of the features that have been successfully implemented:
