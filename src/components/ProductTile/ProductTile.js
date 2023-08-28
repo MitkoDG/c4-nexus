@@ -19,7 +19,7 @@ const ProductTile = ({ product }) => {
     return (
         <div className="product-tile">
             <div className="heart-icon" onClick={toggleHeart}>
-                {isHeartFilled ? "❤️" : "🤍"} {/* Use Unicode characters for heart symbols */}
+                {isHeartFilled ? "❤️" : "🤍"}
             </div>
             <h3>{product.name}</h3>
             <img src={product.image} alt='product-img' />

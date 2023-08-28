@@ -56,8 +56,6 @@ const ProductFilter = ({ categories, onFilter }) => {
         value={maxPrice}
         onChange={e => setMaxPrice(e.target.value)}
       />
-
-      {/* Rating filter */}
       <input
         type="number"
         placeholder="Min Rating"
@@ -65,7 +63,6 @@ const ProductFilter = ({ categories, onFilter }) => {
         onChange={e => setMinRating(e.target.value)}
       />
 
-      {/* Apply filter button */}
       <button onClick={applyFilter} className='filter-button'>Apply Filter</button>
     </div>
   );

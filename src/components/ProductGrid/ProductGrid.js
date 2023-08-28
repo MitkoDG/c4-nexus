@@ -13,7 +13,7 @@ const ProductGrid = ({ filterParams, sortOption, visibleProducts, productsData, 
         }
         return true;
     });
-
+    
     const calculatedTotalProducts = filteredProducts.length;
     onTotalProductsCalculated(calculatedTotalProducts);
 
