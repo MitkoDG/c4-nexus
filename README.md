@@ -1,6 +1,6 @@
 ## Summary of Implemented Features:
 
-In this project, I have developed a responsive web application that demonstrates proficiency in JavaScript, HTML, and CSS. The application focuses on creating a product listing page (PLP) with various interactive functionalities. Here's a breakdown of the features that have been successfully implemented:
+In this project, I have developed a responsive web application by using JavaScript, HTML, CSS and React. The application focuses on creating a product listing page (PLP) with various interactive functionalities. Here's a breakdown of the features that have been successfully implemented:
 
 1. Header and Navigation:
 
