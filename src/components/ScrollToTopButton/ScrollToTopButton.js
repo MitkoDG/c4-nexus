@@ -5,7 +5,7 @@ const ScrollToTopButton = () => {
   const [showButton, setShowButton] = useState(false);
 
   const handleScroll = () => {
-    if (window.pageYOffset > 200) {
+    if (window.scrollY > 200) {
       setShowButton(true);
     } else {
       setShowButton(false);
