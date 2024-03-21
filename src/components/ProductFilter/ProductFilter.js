@@ -26,7 +26,12 @@ const ProductFilter = ({ categories, onFilter }) => {
     if (minRating !== '') {
       filterParams.minRating = parseFloat(minRating);
     }
-    onFilter(filterParams);
+
+    if (!selectedCategory && minPrice === '' && maxPrice === '' && minRating === '') {
+      onFilter({});
+    } else {
+      onFilter(filterParams);
+    }
   };
 
   return (
