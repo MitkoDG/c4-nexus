@@ -16,7 +16,7 @@ const Header = ({ totalProducts, displayedProducts, onCategoryClick }) => {
   return (
     <nav className="navbar">
       <div className="logo">
-        <a href='https://dimitargegov.site/' target='_blank' rel="noreferrer">
+        <a href='https://dimitargegov.website/' target='_blank' rel="noreferrer">
           <img src={logo} alt='DDG projects' />
         </a>
       </div>
