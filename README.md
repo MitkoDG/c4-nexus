@@ -1,5 +1,5 @@
 ![link](https://github.com/MitkoDG/c4-nexus/blob/master/screenshot.jpg)
-[Demo Store](https://localstore.dimitargegov.website/)
+[Demo Store](https://localstore.dimitargegov.site/)
 
 ## Summary of Implemented Features:
 
